@@ -396,7 +396,7 @@ int main(int argc, char **argv)
 
     // Validate number of arguments
     if (argc != 3) {
-        printf("ERROR: Two arguments expected (anabeast [fullPathToDictionaryFile] [wordToFindAnagramsFor])\n");
+        printf("ERROR: Two arguments expected (anagram-finder [fullPathToDictionaryFile] [wordToFindAnagramsFor])\n");
         return 1;
     }
 
