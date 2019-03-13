@@ -633,7 +633,8 @@ int main(int argc, char **argv)
         threadData[i].wordCopy = (char *)malloc(1024 * sizeof(char));
     }
 
-    // 4) Search for anagrams in multiple threads in parallel
+
+    // STEP 4: Search for anagrams in multiple threads in parallel
 
     // Open numProcs-1 threads
     for (int i = 1; i < numProcs; i++) {
@@ -647,6 +648,9 @@ int main(int argc, char **argv)
     for (int i = 1; i < numProcs; i++) {
         pthread_join(threads[i], NULL);
     }
+
+
+    // STEP 5: Print results
 
     char *resultString = (char *)malloc(4096 * sizeof(char));
     for (int i = 0; i < numProcs; i++) {
